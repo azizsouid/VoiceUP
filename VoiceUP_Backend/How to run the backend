@@ -1,0 +1,48 @@
+🚀 VoiceUP Backend - Setup Guide
+
+This guide will help you set up the backend environment for the VoiceUP academic project.
+
+1. Prerequisites
+
+Python 3.8+ installed.
+
+PostgreSQL installed and running.
+
+2. Installation
+
+First, install all the necessary Python libraries globally (as agreed for this prototype):
+
+pip install -r requirements.txt
+
+
+3. Database Configuration
+
+Open pgAdmin 4 or your terminal.
+
+Create a new database named voiceup_db.
+
+Create a file named .env in the root folder of the project and paste the following (replace with your PostgreSQL password):
+
+DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/voiceup_db
+UPLOAD_FOLDER=uploads
+
+
+4. First Run & Data Seeding
+
+Start the server to automatically create the database tables:
+
+python app.py
+
+
+In a new terminal, run the seeding script to create the 5 mock contacts:
+
+python seed.py
+
+
+5. Development Server
+
+The API will be available at: http://127.0.0.1:5000
+
+Important Folders
+
+/uploads: This is where the encrypted audio files (.enc) sent by the mobile app will be stored. Do not delete this folder.
