@@ -1,0 +1,9 @@
+Flask>=2.3.0,<2.4.0
+faster-whisper>=0.6.0
+torch>=2.2.0
+torchaudio>=2.2.0
+librosa>=0.10.0
+numpy>=1.26.0
+soundfile>=0.12.1
+requests
+werkzeug
